@@ -1,0 +1,11 @@
+<%= content_tag(:h1, @dog.name) %>
+<ul>
+  <li>Breed: <%= @dog.breed %></li>
+  <li>Age: <%= @dog.age %></li>
+  <li>Employees: </li>
+    <ul>
+      <% @employees.each do |employee| %>
+        <li><%= link_to employee.full_name, employee_path(employee) %></li>
+      <% end %>
+    </ul>
+</ul>

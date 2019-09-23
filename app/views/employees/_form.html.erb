@@ -1,0 +1,50 @@
+<% if @employee.errors.any? %>
+  <p>The following errors occurred:</p>
+  <ul>
+    <% @employee.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+  
+
+<%= form_for @employee do |f| %>
+  <%= f.label :first_name %> <br>
+  <%= f.text_field :first_name %> <br>
+  <br>
+
+  <%= f.label :last_name %> <br>
+  <%= f.text_field :last_name %> <br>
+  <br>
+
+  <%= f.label :alias %> <br>
+  <%= f.text_field :alias %> <br>
+  <br>
+
+  <%= f.label :title %> <br>
+  <%= f.text_field :title %> <br>
+  <br>
+
+  <%= f.label :office %> <br>
+  <%= f.text_field :office %> <br>
+  <br>
+
+  <%= f.label :img_url %> <br>
+  <%= f.text_field :img_url %> <br>
+
+  <%= content_tag(:p, "Dog:") %>
+  <% @dogs.each do |dog| %>
+    <%= f.radio_button :dog_id, dog.id %><%= dog.name %><br>
+  <% end %>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>
+
+
+
+
+
+  
+
