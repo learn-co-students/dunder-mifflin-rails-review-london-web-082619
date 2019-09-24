@@ -9,6 +9,14 @@
   </head>
 
   <body>
+
+  <nav> 
+  <%= link_to "All Dogs", dogs_path %>
+  <%= link_to "All Employees", employees_path %>
+  <%= link_to "New Employee", new_employee_path %>
+  </nav>
+
+
     <%= yield %>
   </body>
 </html>
