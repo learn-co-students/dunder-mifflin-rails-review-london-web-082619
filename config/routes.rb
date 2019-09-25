@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :dogs
+  resources :dogs, only: [:index, :show]
   resources :employees
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  post "dogs", to: "dogs#reorder", as: "reorder_dogs"
 end
