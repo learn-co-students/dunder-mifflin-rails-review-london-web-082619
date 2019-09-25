@@ -27,7 +27,7 @@ class EmployeesController < ApplicationController
 
     def update
         @employee = Employee.find(params[:id])
-        @employee = Employee.update(employee_parms)
+        @employee.update(employee_params)
         if @employee.valid?
             redirect_to employee_path(@employee)
         else
