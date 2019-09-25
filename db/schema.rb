@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180411182815) do
     t.string "title"
     t.string "office"
     t.string "img_url"
-    t.integer "dog_id"
+    t.string "dog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

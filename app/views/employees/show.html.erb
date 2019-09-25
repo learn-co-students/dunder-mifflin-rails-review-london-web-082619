@@ -1,0 +1,11 @@
+<h1>Employee Details</h1>
+<label>Full Name: <%= @employee.full_name %></label><br>
+<label>Alias: <%= @employee.alias %></label><br>
+<label>Title: <%= @employee.title %></label><br>
+<label>Office: <%= @employee.office %></label><br>
+<p><%= image_tag(@employee.img_url) %></p>
+
+
+<h3><%= link_to "Back to Index", employees_path %></h3><br>
+
+
