@@ -1,0 +1,7 @@
+<h2>Employee index</h2>
+
+<% @employees.each do |emp| %>
+<%= link_to emp.name, employee_path(emp) %> <br>
+<%= link_to 'edit', edit_employee_path(emp) %> <br>
+<%= button_to 'delete', employee_path(emp), method: :delete %> <br> <br>
+<% end %>
