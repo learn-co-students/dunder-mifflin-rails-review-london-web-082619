@@ -13,7 +13,7 @@ class DogsController < ApplicationController
     end
 
     def create
-        @dog = Dog.create(dog_parms)
+        @dog = Dog.create(dog_params)
         if @dog.valid?
             redirect_to dog_path(@dog)
         else
@@ -34,6 +34,13 @@ class DogsController < ApplicationController
             render :edit
         end
     end
+
+    def sort
+        @dogs = Dog.all
+        @sorted_@dogs = @dogs.sort_by {|dog| dog.employees.length }
+        # byebug
+    end
+     
 
     def destroy
         @dog = Dog.find(params[:id])

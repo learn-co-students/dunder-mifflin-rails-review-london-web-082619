@@ -24,6 +24,8 @@
 <%= f.text_field :title %>
 <%= f.label :office, "Office" %>
 <%= f.text_field :office %>
+<%= f.label :img_url, "Image URL" %>
+<%= f.text_field :img_url %>
 <%= f.label :dog_id, "Dog" %>
 <%= f.collection_select :dog_id, Dog.all, :id, :name %>
 <%= f.submit %>
