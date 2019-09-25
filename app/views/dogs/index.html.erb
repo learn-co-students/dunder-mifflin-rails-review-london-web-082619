@@ -1,0 +1,15 @@
+<h1> All Dogs </h1>
+<%= button_to "Sory by employees", reorder_dogs_path %>
+<!--- <%= link_to "Sort by employees", reorder_dogs_path %> -->
+<% @dogs.each do |dog| %>
+<ul>
+<li><%= link_to dog.name, dog_path(dog) %></li>
+</ul>
+<% end %>
+
+<%= link_to "All Employees", employees_path %> 
+<br><br>
+<%= link_to "Create New Employee", new_employee_path %>
+
+
+
