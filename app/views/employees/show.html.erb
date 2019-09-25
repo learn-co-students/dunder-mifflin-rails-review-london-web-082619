@@ -1,0 +1,13 @@
+<h1><%= @employee.first_name %> <%= @employee.last_name %></h1>
+
+<label><i>Alias:</i></label>
+<a><%= @employee.alias %></a> <br>
+
+<label><i>Title:</i></label>
+<a><%= @employee.title %></a> <br>
+
+<label><i>office:</i></label>
+<a><%= @employee.office %></a> <br>
+
+<label for="employee_image">Employee Image: </label>
+<img id="employee_image" src=<%=@employee.img_url%> alt="Dunder Mifflin Employee Picture">
