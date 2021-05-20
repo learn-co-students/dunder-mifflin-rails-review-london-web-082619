@@ -1,0 +1,6 @@
+<h1>The Dogs</h1>
+<%= button_to 'Order by Employees', dog_path(@dog) %>
+
+<% @dogs.each do |dog| %>
+    <%= link_to dog.name, dog %> <br>
+<% end %>
